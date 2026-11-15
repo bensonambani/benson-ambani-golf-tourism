@@ -418,3 +418,13 @@ nav a:focus-visible, a:focus-visible { outline:3px solid #d6b35f; outline-offset
 .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus { outline:3px solid rgba(214,179,95,.45); border-color:#17613e; }
 .form-note { max-width:760px; margin:14px auto 0; font-size:.95rem; }
 @media (max-width:600px) { .booking-form { padding:20px 16px; } }
+
+/* Additional navigation, content and footer polish */
+.text-link { display:inline-block; margin-top:12px; color:#17613e; font-weight:700; text-underline-offset:3px; }
+#journal { background:#eef3ee; }
+#reviews { background:#fff; }
+#reviews .booking-form { border-color:#d6b35f; }
+.footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:12px 24px; margin-top:12px; }
+.footer-links a { color:#fff; text-underline-offset:3px; }
+:focus-visible { outline:3px solid #d6b35f; outline-offset:3px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; } }
