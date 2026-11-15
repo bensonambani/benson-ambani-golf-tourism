@@ -37,4 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
       sendWhatsApp(["Hello Benson, I would like to enquire about a golf experience.","","Name: " + name,"Phone or email: " + contact,"Service: " + service,"Preferred date: " + date,"Golf course / destination: " + location,"Additional details: " + details,"","I understand this is an enquiry and is not yet a confirmed booking."].join("\n"));
     });
   }
+
+  const reviewForm = document.getElementById("review-form");
+  if (reviewForm) {
+    reviewForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!reviewForm.reportValidity()) return;
+      const name = document.getElementById("review-name").value.trim();
+      const service = document.getElementById("review-service").value.trim();
+      const rating = document.getElementById("review-rating").value;
+      const message = document.getElementById("review-message").value.trim();
+      sendWhatsApp(["Hello Benson, I would like to submit feedback about my experience.","","Name: " + name,"Service / experience: " + service,"Rating: " + rating,"Feedback: " + message,"","I understand this feedback is submitted for review and will not be published without my permission."].join("\n"));
+    });
+  }
 });
